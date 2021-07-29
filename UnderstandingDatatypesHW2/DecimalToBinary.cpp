@@ -20,15 +20,15 @@ int main()
 int binaryEquivalent(int inputInteger) {
 	//int bitArray[100];
 	int* bitArray;
-	bitArray = (int*)calloc(100, 1);
+	bitArray = (int*)calloc(100, sizeof(char));
 	int index = 0;
-	int decimal = inputInteger;
-	while ((decimal / 2) > 0) {
-		bitArray[index] = decimal % 2;
-		decimal = decimal / 2;
+	int decimalNumber = inputInteger;
+	while ((decimalNumber / 2) > 0) {
+		bitArray[index] = decimalNumber % 2;
+		decimalNumber = decimalNumber / 2;
 		index++;
 	}
-	bitArray[index] = decimal % 2;
+	bitArray[index] = decimalNumber % 2;
 
 	cout << "Binary equivalent of " << inputInteger << " is ";
 
